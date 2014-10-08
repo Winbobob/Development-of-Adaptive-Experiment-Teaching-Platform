@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudyDataMasterPage.master.cs" Inherits="StudyData_StudyDataMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>无标题页</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+    #container
+    { 
+	background-position: center;
+	background-image:url(../images/studydata.jpg);
+	position: relative;
+	width: 1084px;
+	height: 1399px;
+	z-index: 1;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	margin-top: 0;
+    }	
+    #content
+    {
+	position: absolute;
+	width: 767px;
+	height: 856px;
+	left: 269px;
+	top: 420px;
+    margin-right: 12px;
+    margin-left: 4px;
+    }
+    #down
+    {
+	position: absolute;
+	width: 1010px;
+	height: 50px;
+	left: 32px;
+	top: 1321px;
+    bottom: 28px;
+    }
+    .bottomtext
+    {
+    font-family: 微软雅黑;
+    color: #000000;
+    font-size: medium;
+    }
+     .bottomtext2
+    {
+    font-family: 微软雅黑;
+    color:Red;
+    font-size:large;
+    }
+    #head
+    {
+	position: absolute;
+	width: 762px;
+	height: 81px;
+	left: 274px;
+	top: 328px;
+    }
+    #information
+    {
+	position: absolute;
+	width: 184px;
+	height: 160px;
+	left: 50px;
+	top: 361px;
+    font-family:@微软雅黑;
+    }
+    #left2
+    {
+	position: absolute;
+	width: 154px;
+	height: 512px;
+	left: 61px;
+	top: 611px;
+    }
+    </style>
+</head>
+<body bgcolor="#077036">
+    <form id="form1" runat="server">
+      <div id=container>
+        <div id=head>  
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderTop" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id=information>
+           <asp:ContentPlaceHolder ID="ContentPlaceHolderInformation" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+         <div id=left2>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderLeft" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id=content>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id=down>
+         <table width="100%">
+              <tr>
+                <td align="center">
+                  <span class="bottomtext">浙江师范大学&nbsp;&nbsp; 教师教育学院&nbsp;&nbsp; 教育技术学<br />陶燕云&nbsp; 胡哲玮&nbsp; 朱思奇&nbsp; 黄宇玲</span>
+                </td>
+              </tr>
+            </table>
+       </div> 
+
+      </div>
+    </form>
+</body>
+</html>

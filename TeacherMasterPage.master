@@ -1,0 +1,149 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TeacherMasterPage.master.cs" Inherits="TeacherMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>无标题页</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+    #container
+    { 
+	background-position: center;
+	background-image:url(images/Teacher.jpg);
+	position: relative;
+	width: 1200px;
+	height: 1279px;
+	z-index: 1;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	margin-top: 0;
+    }	
+    #head
+    {
+	position: absolute;
+	width: 753px;
+	height: 26px;
+	left: 372px;
+	top: 355px;
+    }
+    #content
+    {
+	position: absolute;
+	width: 753px;
+	height: 678px;
+	left: 372px;
+	top: 399px;
+    }
+    #information
+    {
+	position: absolute;
+	width: 227px;
+	height: 151px;
+	left: 98px;
+	top: 386px;
+    }
+    #unit
+    {
+	position: absolute;
+	width: 221px;
+	height: 467px;
+	left: 100px;
+	top: 611px;
+    }
+	#down
+    {
+	position: absolute;
+	width: 1109px;
+	height: 54px;
+	left: 50px;
+	top: 1177px;
+    bottom: 48px;
+    }
+    .zhuxiao
+    {
+    text-decoration: none;
+    font-family: 微软雅黑;
+    color: #800000;
+    font-weight: bold;
+    }
+    .bottomtext
+    {
+    font-family: 微软雅黑;
+    color: #FFFFFF;
+    font-size: medium;
+    }
+    .bottomtext1
+    {
+    font-family: 微软雅黑;
+    color: #000000;
+    font-size: medium;
+    }
+    </style>
+</head>
+<body bgcolor="#028B40">
+    <form id="form1" runat="server">
+    <div id=container>
+       <div id=head>
+          <table width="100%">
+              <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td align="right">
+                 <asp:LinkButton ID="LinkButton3" runat="server" CssClass="zhuxiao" 
+                        PostBackUrl="~/TeacherDefault.aspx">实验说明</asp:LinkButton> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="zhuxiao" 
+                        PostBackUrl="~/Login.aspx">注销</asp:LinkButton>
+                &nbsp;&nbsp;
+                </td>
+              </tr>
+            </table>
+       </div>
+       <div id=content>
+          <asp:ContentPlaceHolder ID="ContentPlaceHolderContent" runat="server">
+            </asp:ContentPlaceHolder>
+       </div>
+       <div id=information>
+          <table width="100%">
+            <tr>
+              <td rowspan="5" height="138" width="120" valign="top">
+            <asp:Image ID="imgphoto" runat="server"  width="110px" height="138px" />
+        </td>
+              <td class="bottomtext1">姓名:<asp:Label ID="lblteaName" runat="server" ></asp:Label></td>
+            </tr>
+            <tr>
+              <td class="bottomtext1">账号:<asp:Label ID="lblteaId" runat="server" ></asp:Label></td>
+            </tr>
+            <tr>
+              <td class="bottomtext1">性别:<asp:Label ID="lblgender" runat="server" ></asp:Label></td>
+            </tr>
+            <tr>
+              <td class="bottomtext1">短号:<asp:Label ID="lblphone" runat="server" ></asp:Label></td>
+            </tr>
+            <tr>
+              <td>&nbsp; <asp:ImageButton ID="ImageButton1" runat="server" border="0px"
+                ImageUrl="~/images/teacher_28.gif" onclick="ImageButton1_Click" 
+                BorderStyle="None" BorderWidth="0px"  /></td>
+            </tr>
+          </table>
+       </div>
+       <div id=unit>
+          <asp:ContentPlaceHolder ID="ContentPlaceHolderUnit" runat="server">
+            </asp:ContentPlaceHolder>
+       </div>
+       <div id=down>
+         <table width="100%">
+              <tr>
+                <td align="center">
+                  <span class="bottomtext">浙江师范大学&nbsp;&nbsp; 教师教育学院&nbsp;&nbsp; 教育技术学<br />陶燕云&nbsp; 胡哲玮&nbsp; 朱思奇&nbsp; 黄宇玲</span>
+                </td>
+              </tr>
+            </table>
+       </div> 
+    </div>
+    </form>
+</body>
+</html>
